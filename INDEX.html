@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ujumbe Maalum kwa Mama Mpendwa 💕</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffeef2; /* Rangi ya Pinki laini sana kwa ajili ya ukurasa mzima */
+            color: #d81b60; /* Maandishi ya rangi ya pinki iliyokoza */
+            text-align: center;
+        }
+
+        header {
+            background-color: #ff69b4; /* Pinki ya moto (Hot Pink) kwenye header */
+            color: white;
+            padding: 25px;
+            font-size: 24px;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(255, 105, 180, 0.3);
+            letter-spacing: 1px;
+        }
+
+        .comfort-section {
+            padding: 40px 20px;
+            background-color: #ffffff; /* Boksi kuu linakuwa jeupe ili pinki ing'ae vizuri */
+            max-width: 550px;
+            margin: 40px auto;
+            border-radius: 25px;
+            box-shadow: 0 10px 30px rgba(255, 105, 180, 0.2);
+            border: 3px solid #ffb3c1; /* Mstari wa pembeni wa pinki iliyotulia */
+        }
+
+        /* Boksi la Video ya Canva */
+        .video-box-container {
+            width: 100%;
+            max-width: 400px;
+            margin: 25px auto;
+            border-radius: 20px;
+            border: 4px solid #ff69b4; /* Mstari mzito wa pinki kwenye video */
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(255, 105, 180, 0.25);
+        }
+
+        .video-box-container video {
+            width: 100%;
+            display: block;
+        }
+
+        /* Kitufe kikuu cha unyama wa pinki */
+        .btn-comfort {
+            background-color: #ff4d6d; /* Pinki ya upendo na matumaini */
+            color: white;
+            border: none;
+            padding: 16px 35px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 35px;
+            cursor: pointer;
+            box-shadow: 0 5px 20px rgba(255, 77, 109, 0.4);
+            transition: 0.3s;
+            margin: 20px auto;
+            display: inline-block;
+        }
+
+        .btn-comfort:hover {
+            background-color: #c9184a; /* Pinki inabadilika kuwa nzito kidogo ukigusa */
+            transform: scale(1.03);
+        }
+
+        /* Boksi la Ujumbe Kamili kutoka kwenye Picha ya Mteja */
+        .message-box {
+            font-family: 'Georgia', serif;
+            font-size: 19px;
+            line-height: 1.8;
+            color: #4a0018; /* Maandishi meusi yaliyochanganyika na pinki nzito sana ili yasomeke kirahisi */
+            background-color: #fff0f3; /* Background ya pinki laini ndani ya ujumbe */
+            border-radius: 20px;
+            padding: 30px 25px;
+            margin: 30px 0;
+            border-top: 5px solid #ff4d6d; /* Mstari wa juu wa pinki */
+            text-align: left; /* Muundo wa barua tulivu */
+            box-shadow: inset 0 2px 5px rgba(255, 105, 180, 0.05);
+        }
+
+        /* Vikopa vya Pinki chini ya ujumbe */
+        .pink-hearts {
+            font-size: 26px;
+            color: #ff4d6d;
+            letter-spacing: 5px;
+            margin: 20px 0;
+        }
+
+        footer {
+            color: #ff85a2;
+            font-size: 13px;
+            margin-top: 50px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        💕 ZAWADI MAALUM YA UPENDO KWA MAMA 💕
+    </header>
+
+    <section class="comfort-section">
+        <p style="font-family: 'Georgia', serif; font-size: 30px; color: #ff4d6d; font-weight: bold; margin-top: 10px; margin-bottom: 5px;">Stay Strong, Mom 💕</p>
+        <p style="font-size: 15px; color: #ff85a2; margin-top: 0; font-weight: bold;">Ujumbe wa Faraja Kutoka kwa Mtoto wako Mpendwa</p>
+        
+        <div class="video-box-container">
+            <video id="comfortVideo" loop playsinline>
+                <source src="Torn Paper Heart Hand Made Mom Birthday Photo Collage.mp4" type="video/mp4">
+                Browser yako haisomi video.
+            </video>
+        </div>
+
+        <button class="btn-comfort" onclick="funguaUjumbe()">💗 Fungua Ujumbe Huu Mama 💗</button>
+        
+        <div class="message-box">
+            "Mom, I know you are going through a difficult time, but please remember that you are a very strong woman. Every challenge has an end, and God will never give you a burden greater than you can bear. I am here for you, I love you, and I believe better days will come again. Don’t lose hope, Mom — your smile is a source of strength for our family. 💕"
+        </div>
+
+        <div class="pink-hearts">💗✨💕✨💗</div>
+    </section>
+
+    <footer>
+        <p>Imetengenezwa kwa Upendo na Centrix Digital 💕</p>
+    </footer>
+
+    <audio id="comfortMusic" loop>
+        <source src="melodyloops-preview-touch-of-hope-2m30s.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        function funguaUjumbe() {
+            var audio = document.getElementById('comfortMusic');
+            var video = document.getElementById('comfortVideo');
+            var button = document.querySelector('.btn-comfort');
+            
+            if (video.paused) {
+                video.play();
+                audio.play();
+                button.innerHTML = "⏸️ Sitisha Sauti";
+                button.style.backgroundColor = "#ff85a2"; /* Rangi inabadilika kuwa pinki laini ikianza ku-play */
+            } else {
+                video.pause();
+                audio.pause();
+                button.innerHTML = "💗 Fungua Ujumbe Huu Mama 💗";
+                button.style.backgroundColor = "#ff4d6d";
+            }
+        }
+    </script>
+</body>
+</html>
